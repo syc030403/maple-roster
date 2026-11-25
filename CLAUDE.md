@@ -60,10 +60,10 @@
 - 경로는 GitHub Pages 하위 경로(`/<저장소 이름>/`) 기준으로 동작해야 한다. 절대 경로 `/assets/...`를 하드코딩하지 않고 Vite `base`를 쓴다.
 
 ## 검증
-기술 스택: Vite + React + TypeScript [확정]. `package.json`이 생기기 전에는 해당 없음. 스크립트 이름은 아래에 맞춘다.
+기술 스택: Vite + React + TypeScript. 처음 받았으면 `npm ci`.
 - 자동:
-  - `npm run lint` (ESLint)
-  - `npm run typecheck` (`tsc --noEmit`)
+  - `npm run lint` (oxlint)
+  - `npm run typecheck` (`tsc -b`)
   - `npm test` (Vitest, 네트워크 없이 목 응답으로)
   - `npm run build` (GitHub Pages `base`로 빌드 성공)
 - 직접:
