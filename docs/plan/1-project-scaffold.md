@@ -11,8 +11,8 @@
 
 ## 규칙 / 변경 내용
 - [확정] Vite + React + TypeScript. `npm create vite`의 react-ts 템플릿을 기준으로 필요 없는 예제(로고, 카운터)는 지운다.
-- [확정] npm 스크립트 이름은 `CLAUDE.md` "검증"에 맞춘다: `dev`, `build`, `preview`, `lint`, `typecheck`(`tsc -b --noEmit` 또는 동등), `test`(`vitest run`).
-- [확정] 개발 의존성: ESLint(템플릿 기본 설정), Vitest. 그 밖의 라이브러리는 넣지 않는다 (라우터, 상태 관리, UI 키트, testing-library 없음).
+- [확정] npm 스크립트 이름은 `CLAUDE.md` "검증"에 맞춘다: `dev`, `build`, `preview`, `lint`, `typecheck`(`tsc -b`), `test`(`vitest run`).
+- [확정] 개발 의존성: 템플릿 기본 린터(oxlint), Vitest. 그 밖의 라이브러리는 넣지 않는다 (라우터, 상태 관리, UI 키트, testing-library 없음).
 - [확정] 디렉토리: `src/api`, `src/storage`, `src/logic`, `src/data`, `src/ui`. 빈 폴더는 역할 한 줄을 적은 `README.md`로 유지한다.
 - [확정] Vite `base`: 빌드는 `/maple-roster/`, 개발 서버는 `/` (V25).
 - [확정] 첫 화면: 앱 이름, "준비 중" 안내, 하단 출처 표기 `Data based on NEXON Open API` (V22). 출처 표기는 `src/ui/Footer.tsx` 컴포넌트로 분리.
@@ -32,13 +32,13 @@
 - [확정] 문서: `docs/design/systems/deploy.md`를 실제 구성으로 갱신, `CLAUDE.md` "검증"의 "[임시]/해당 없음" 문구 정리, README 개발 절 갱신.
 
 ## 수용 기준
-- [ ] 성공: `npm ci && npm run lint && npm run typecheck && npm test && npm run build`가 로컬에서 모두 통과
-- [ ] 성공: `npm run dev`로 첫 화면과 출처 표기가 보임
-- [ ] 성공: `dist/index.html`의 스크립트·스타일 경로가 `/maple-roster/`로 시작
+- [x] 성공: `npm ci && npm run lint && npm run typecheck && npm test && npm run build`가 로컬에서 모두 통과
+- [x] 성공: `npm run dev`로 첫 화면과 출처 표기가 보임
+- [x] 성공: `dist/index.html`의 스크립트·스타일 경로가 `/maple-roster/`로 시작
 - [ ] 성공: `workflow_dispatch` 또는 `main` 반영 후 배포 워크플로가 성공하고 Pages 주소에서 첫 화면이 뜸
-- [ ] 실패·예외: 테스트를 일부러 깨뜨리면 워크플로가 build 전 단계에서 멈추고 배포되지 않음 (로컬에서 `npm test` 실패로 확인, 워크플로 순서는 파일로 확인)
+- [x] 실패·예외: 테스트를 일부러 깨뜨리면 워크플로가 build 전 단계에서 멈추고 배포되지 않음 (로컬에서 `npm test` 실패로 확인, 워크플로 순서는 파일로 확인)
 - [ ] 경계: Pages 주소에서 새로고침해도 404·자산 깨짐이 없음
-- [ ] 경계: `src/data/`에 `source` 없는 JSON을 임시로 넣으면 데이터 검사 테스트가 실패함 (확인 후 삭제)
+- [x] 경계: `src/data/`에 `source` 없는 JSON을 임시로 넣으면 데이터 검사 테스트가 실패함 (확인 후 삭제)
 
 ## 지켜야 할 규칙
 - V1, V2, V3, V4(배포 확인 기록), V5
@@ -69,7 +69,10 @@
 | 배포 워크플로 안에서 lint·typecheck·test를 돌리고, 실패하면 배포 중단 | 깨진 빌드 배포 방지. merge는 막지 않음 | 추가 |
 | PR용 CI는 두지 않음 [임시] | 로컬 검증이 기준, 도구 최소화 | 추가 안 함 |
 | 기본 브랜치 develop | `Closes #N`이 develop merge 때 동작 | 추가 |
+| 린터는 oxlint (템플릿 기본값이 ESLint에서 바뀜) | 기획의 "템플릿 기본 설정" 유지 | 추가 |
+| 템플릿의 favicon·예제 자산은 넣지 않음 | 절대 경로 `/favicon.svg`가 Pages 하위 경로에서 깨지고, Vite 로고라 쓸 이유 없음 | 추가 안 함 |
 
 ## 진행 기록
 - 2026-11-25 빈 기획 파일 생성 (/issue)
 - 2026-11-25 기획 작성 (/plan)
+- 2026-11-25 구현 (/task). 배포 확인(성공 4번째, 경계 새로고침)은 Pages 설정과 develop → main 반영 뒤에 남음

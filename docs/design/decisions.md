@@ -4,6 +4,7 @@
 
 | 날짜 | 결정 | 이유 | 관련 |
 | --- | --- | --- | --- |
+| 2026-11-25 | 린터는 ESLint 대신 oxlint (Vite react-ts 템플릿 기본값) | 기획의 "템플릿 기본 설정"을 따름. 현재 템플릿이 oxlint를 기본으로 씀 | [#1 기획](../plan/1-project-scaffold.md) |
 | 2026-11-25 | GitHub Pages 배포는 main push 시 Actions에서 lint·typecheck·test 통과 후에만 진행 | 깨진 빌드 배포 방지. PR merge는 막지 않음 | [#1 기획](../plan/1-project-scaffold.md) |
 | 2026-11-25 | 저장소 기본 브랜치를 develop으로 변경 | `Closes #N`이 develop merge 때 이슈를 닫도록 | [#1 기획](../plan/1-project-scaffold.md) |
 | 2026-11-25 | 월간 보스도 전투력 조건이 맞으면 추천 후보에 포함 | 보스 종류가 아니라 전투력만으로 판단 | 초기 설정 |

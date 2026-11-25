@@ -15,11 +15,15 @@
 - API 키는 [NEXON Open API](https://openapi.nexon.com/)에서 발급받을 수 있습니다.
 
 ## 개발
-기술 스택: Vite + React + TypeScript (준비 중)
+기술 스택: Vite + React + TypeScript, oxlint, Vitest
 
 ```bash
-npm install
-npm run dev
+npm ci
+npm run dev        # 개발 서버
+npm run lint       # 린트
+npm run typecheck  # 타입 검사
+npm test           # 테스트
+npm run build      # GitHub Pages용 빌드 (dist/)
 ```
 
 검증 명령과 작업 규칙은 `CLAUDE.md`, 작업 흐름은 `docs/development/contributor-guide.md`를 봅니다.
