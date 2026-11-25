@@ -1,0 +1,23 @@
+# 비밀값·로컬 정보 (절대 커밋 금지)
+.env
+.env.*
+!.env.example
+CLAUDE.local.md
+
+# 의존성·빌드 산출물
+node_modules/
+dist/
+coverage/
+.vite/
+*.log
+
+# OS·에디터
+.DS_Store
+.idea/
+.vscode/
+
+# 키트 원본 복사본
+claude-workflow-kit/
+
+# 실제 API 응답 덤프 (개인 정보 포함)
+api-dumps/
