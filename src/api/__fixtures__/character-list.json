@@ -1,0 +1,35 @@
+{
+  "account_list": [
+    {
+      "account_id": "fake-account-1",
+      "character_list": [
+        {
+          "ocid": "fake-ocid-1",
+          "character_name": "테스트캐릭A",
+          "world_name": "스카니아",
+          "character_class": "히어로",
+          "character_level": 270
+        },
+        {
+          "ocid": "fake-ocid-2",
+          "character_name": "테스트캐릭B",
+          "world_name": "베라",
+          "character_class": "비숍",
+          "character_level": 255
+        }
+      ]
+    },
+    {
+      "account_id": "fake-account-2",
+      "character_list": [
+        {
+          "ocid": "fake-ocid-3",
+          "character_name": "테스트캐릭C",
+          "world_name": "스카니아",
+          "character_class": "카데나",
+          "character_level": 230
+        }
+      ]
+    }
+  ]
+}

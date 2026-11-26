@@ -42,8 +42,8 @@
 | 순서 | 이슈 (예정) | 종류 · 영역 | 상태 |
 | --- | --- | --- | --- |
 | 1 | 프로젝트 뼈대: Vite + React + TS, 린트·테스트, Pages 배포 워크플로, 출처 표기 | chore · `area:deploy` | 완료 (#1) |
-| 2 | API 키 입력, 캐릭터 목록 (CORS 확인 포함) | feature · `area:api` `area:roster` | 예정 |
-| 3 | 전체 직업 목록과 보유/미보유 구분 | feature · `area:roster` | 예정 |
+| 2 | API 키 입력, 캐릭터 목록 (CORS 확인 포함) | feature · `area:api` `area:roster` | 완료 (#7) |
+| 3 | 전체 직업 목록과 보유/미보유 구분, 월드 선택 | feature · `area:roster` | 예정 |
 | 4 | 직업별 링크 스킬·유니온 효과 | feature · `area:link-union` | 예정 |
 | 5 | 캐릭터 상세: 전투력, 보스 12마리 추천 | feature · `area:boss` | 예정 |
 | 6 | 보스 처치 현황과 추천 목록의 처치 표시 | feature · `area:boss` | 예정 |
@@ -54,8 +54,7 @@
 | Q1 | 기술 스택 | [확정] Vite + React + TypeScript |
 | Q2 | 보스 처치 현황 데이터 원천 | [확정] 직접 체크, localStorage 저장, 매주 목요일 00:00(KST) 초기화 |
 | Q3 | 보스별 권장 전투력 기준표 | [확정] 직접 정리한 `src/data/bosses.json`이 기준. 공식·외부 수치가 있으면 참고해 반영하되 JSON을 우선 |
+| Q4 | 브라우저에서 NEXON Open API 직접 호출(CORS) | [확정] 직접 호출 가능, 프록시 없음 (#7에서 실제 키로 확인) |
 
 ## 남은 [미정]
-| # | 내용 | 선택지 | 추천 |
-| --- | --- | --- | --- |
-| Q4 | 브라우저에서 NEXON Open API 직접 호출(CORS) 가능 여부 | 가능하면 그대로 / 안 되면 프록시(외부 비용·계정 생김) | 이슈 2에서 먼저 확인. 프록시가 필요하면 디렉터 확인 |
+없음
