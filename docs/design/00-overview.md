@@ -41,7 +41,7 @@
 ## 로드맵
 | 순서 | 이슈 (예정) | 종류 · 영역 | 상태 |
 | --- | --- | --- | --- |
-| 1 | 프로젝트 뼈대: Vite + React + TS, 린트·테스트, Pages 배포 워크플로, 출처 표기 | chore · `area:deploy` | 예정 |
+| 1 | 프로젝트 뼈대: Vite + React + TS, 린트·테스트, Pages 배포 워크플로, 출처 표기 | chore · `area:deploy` | 완료 (#1) |
 | 2 | API 키 입력, 캐릭터 목록 (CORS 확인 포함) | feature · `area:api` `area:roster` | 예정 |
 | 3 | 전체 직업 목록과 보유/미보유 구분 | feature · `area:roster` | 예정 |
 | 4 | 직업별 링크 스킬·유니온 효과 | feature · `area:link-union` | 예정 |
