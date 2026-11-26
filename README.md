@@ -37,7 +37,9 @@ npm run build      # GitHub Pages용 빌드 (dist/)
 | `docs/design/verification.md` | 항상 지켜야 할 규칙 |
 
 ## 배포
-GitHub Pages
+GitHub Pages: https://syc030403.github.io/maple-roster/
+
+`main`에 반영되면 GitHub Actions가 검증(lint, typecheck, test, build)을 통과한 뒤 자동으로 배포합니다. `develop`은 배포되지 않습니다.
 
 ## 출처
 Data based on NEXON Open API. 이 프로젝트는 넥슨과 관련이 없는 개인 프로젝트입니다.
